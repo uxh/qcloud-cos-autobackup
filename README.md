@@ -8,7 +8,7 @@
 ## 更新 pip 工具
 `pip install --upgrade pip`
 ## 安装 SDK
-`pip install -U cos-python-sdk-v5`
+`pip install -U cos-python-sdk-v5 --ignore-installed`
 # 二、使用示例
 ## 安装 wget 工具
 `yum install -y wget`
