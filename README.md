@@ -6,7 +6,7 @@
 如果提示 *No package python-pip available* 请先运行下列命令，再运行上述命令<br>
 `yum install -y epel-release && yum install -y yum-utils && yum-config-manager --enable epel`
 ## 更新 pip 工具
-`pip install --upgrade pip`
+`pip install --upgrade "pip < 21.0"`
 ## 安装 SDK
 `pip install -U cos-python-sdk-v5 --ignore-installed`
 # 二、使用示例
