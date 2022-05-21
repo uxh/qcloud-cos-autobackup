@@ -10,17 +10,17 @@ logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 # 设置用户配置
 if ( len(sys.argv) > 5 ):
     #设置用户的secretId
-    secret_id = sys.argv[1].decode('utf-8')
+    secret_id = sys.argv[1].encode('utf-8').decode('utf-8')
     #设置用户的secretKey
-    secret_key = sys.argv[2].decode('utf-8')
+    secret_key = sys.argv[2].encode('utf-8').decode('utf-8')
     #设置用户的Region
-    region = sys.argv[3].decode('utf-8')
+    region = sys.argv[3].encode('utf-8').decode('utf-8')
     #设置用户的Bucket
-    bucket = sys.argv[4].decode('utf-8')
+    bucket = sys.argv[4].encode('utf-8').decode('utf-8')
     #设置用户的本地文件
-    localfile = sys.argv[5].decode('utf-8')
+    localfile = sys.argv[5].encode('utf-8').decode('utf-8')
     #设置用户的远程文件
-    cosfile = sys.argv[6].decode('utf-8')
+    cosfile = sys.argv[6].encode('utf-8').decode('utf-8')
 else:
     print("Example: python %s SecretID SecretKey Region Bucket /data/backup.zip backup.zip" % sys.argv[0])
     exit()
