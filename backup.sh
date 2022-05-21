@@ -66,7 +66,7 @@ function backup_file() {
     fi
     ${ZIP} -P${zippassword} -9r ${backupdir}/${domain}\_${Date}\.zip ${websitedir}
     if [ $? -eq 0 ]; then
-        echo -e "[${green}INFO${plain}] Zip web directory ${websitedir} sucdcess"
+        echo -e "[${green}INFO${plain}] Zip web directory ${websitedir} success"
     else
         echo -e "[${red}ERROR${plain}] Zip web directory ${websitedir} failed, please try again!"
     fi
