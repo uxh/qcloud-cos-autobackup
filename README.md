@@ -2,11 +2,13 @@
 
 ## 注意
 
-以下所有操作都是默认在**CentOS7 x64**系统下进行的，其他系统暂未测试。
+以下操作已在**CentOS7 x64**和**Debian11 x64**上通过，其他系统暂未测试。
 
 ## 安装腾讯云官方 SDK（Python 版）
 
 1、安装 pip 工具
+
+CentOS7 x64：
 
 ```bash
 yum install -y python-pip
@@ -18,13 +20,29 @@ yum install -y python-pip
 yum install -y epel-release && yum install -y yum-utils && yum-config-manager --enable epel
 ```
 
+Debian11 x64：
+
+```bash
+apt install -y python3-pip
+```
+
 2、更新 pip 工具
+
+CentOS7 x64：
 
 ```bash
 pip install --upgrade "pip < 21.0"
 ```
 
+Debian11 x64：
+
+```bash
+pip install --upgrade pip
+```
+
 3、安装 SDK
+
+CentOS7 x64 & Debian11 x64：
 
 ```bash
 pip install -U cos-python-sdk-v5 --ignore-installed
@@ -32,8 +50,15 @@ pip install -U cos-python-sdk-v5 --ignore-installed
 
 4、安装其他依赖
 
+CentOS7 x64：
+
 ```bash
 yum install -y wget zip
+```
+
+Debian11 x64：
+```bash
+apt install -y wget zip
 ```
 
 ## 使用示例
