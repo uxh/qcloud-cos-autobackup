@@ -27,8 +27,13 @@ zipautodelete="true" #需要修改
 Bashdir=$(cd `dirname $0`; pwd)
 Date=$(date +%u)
 ZIP=$(which zip)
-PYTHON=$(which python)
 MYSQLDUMP=$(which mysqldump)
+which python > /dev/null 2>&1
+if [ $? -ne 0 ]; then
+    PYTHON=$(which python)
+else
+    PYTHON=$(which python3)
+fi
 
 function help_info() {
     echo -e "[${yellow}用法示例${plain}]："
