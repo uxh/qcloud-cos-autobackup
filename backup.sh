@@ -30,9 +30,9 @@ ZIP=$(which zip)
 MYSQLDUMP=$(which mysqldump)
 which python > /dev/null 2>&1
 if [ $? -ne 0 ]; then
-    PYTHON=$(which python)
-else
     PYTHON=$(which python3)
+else
+    PYTHON=$(which python)
 fi
 
 function help_info() {
