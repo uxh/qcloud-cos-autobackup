@@ -28,7 +28,7 @@ Bashdir=$(cd `dirname $0`; pwd)
 Date=$(date +%u)
 ZIP=$(which zip)
 MYSQLDUMP=$(which mysqldump)
-which python > /dev/null 2>&1
+yum -h > /dev/null 2>&1
 if [ $? -ne 0 ]; then
     PYTHON=$(which python3)
 else
