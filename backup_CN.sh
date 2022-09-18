@@ -64,7 +64,7 @@ function backup_file() {
     local backupdir=$3
 
     if [ ! -d ${backupdir} ]; then
-        mkdir ${backupdir}
+        mkdir -p ${backupdir}
     fi
     if [ -f ${backupdir}/${domain}\_${Date}\.zip ]; then
         rm -f ${backupdir}/${domain}\_${Date}\.zip
@@ -87,7 +87,7 @@ function backup_db() {
     local backupdir=$5
 
     if [ ! -d ${backupdir} ]; then
-        mkdir ${backupdir}
+        mkdir -p ${backupdir}
     fi
     cd ${backupdir}
     ${MYSQLDUMP} -hlocalhost -u${mysqluser} -p${mysqlpassword} ${databasename} --skip-lock-tables --default-character-set=utf8 > ${backupdir}/${domain}\_db_${Date}\.sql
