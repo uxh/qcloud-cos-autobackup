@@ -90,7 +90,7 @@ wget --no-check-certificate -O cos.upload.py https://github.com/uxh/qcloud-cos-a
 4、创建备份目录
 
 ```bash
-mkdir /home/wwwbackups
+mkdir -p /home/wwwbackups
 ```
 
 5、备份网站目录
