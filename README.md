@@ -65,16 +65,8 @@ apt install -y wget zip
 
 1、下载备份脚本
 
-英文版
-
 ```bash
 wget --no-check-certificate -O backup.sh https://github.com/uxh/qcloud-cos-autobackup/raw/master/backup.sh
-```
-
-中文版
-
-```bash
-wget --no-check-certificate -O backup_CN.sh https://github.com/uxh/qcloud-cos-autobackup/raw/master/backup_CN.sh
 ```
 
 2、下载上传脚本
@@ -95,28 +87,12 @@ mkdir -p /home/wwwbackups
 
 5、备份网站目录
 
-英文版执行此命令
-
 ```bash
 bash backup.sh --file 123.com /home/wwwroot/123.com /home/wwwbackups/123.com
 ```
 
-中文版执行此命令
-
-```bash
-bash backup_CN.sh --file 123.com /home/wwwroot/123.com /home/wwwbackups/123.com
-```
-
 6、备份网站数据库
-
-英文版执行此命令
 
 ```bash
 bash backup.sh --db 123.com 123.com_database root w123456 /home/wwwbackups/123.com
-```
-
-中文版执行此命令
-
-```bash
-bash backup_CN.sh --db 123.com 123.com_database root w123456 /home/wwwbackups/123.com
 ```
