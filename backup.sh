@@ -25,7 +25,7 @@ zippassword="1234567890" #needed
 zipautodelete="true" #needed
 
 #Log setting
-logfile="/home/wwwbackups/log/backup-cos.log"  #needed
+logdir="/home/wwwbackups/log"  #needed
 logset="false" #needed
 
 Bashdir=$(cd `dirname $0`; pwd)
@@ -49,7 +49,11 @@ function help_info() {
 
 function log_outcome() {
     if [ "${logset}" == "true" ]; then
-        echo -e "$(date "+%Y-%m-%d %H:%M:%S")" "$1" >> ${logfile}
+        if [ ! -d ${logdir} ]; then
+            mkdir -p ${logdir}
+        fi
+
+        echo -e "$(date "+%Y-%m-%d %H:%M:%S")" "$1" >> ${logdir}/backup-cos.log
     fi
 }
 
