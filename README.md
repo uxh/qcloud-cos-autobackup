@@ -20,7 +20,13 @@ yum install -y python-pip
 yum install -y epel-release && yum install -y yum-utils && yum-config-manager --enable epel
 ```
 
-Debian10 x64 & Debian11 x64：
+Debian10 x64:
+
+```bash
+apt install -y python3-pip
+```
+
+Debian11 x64：
 
 ```bash
 apt install -y python3-pip
@@ -40,7 +46,7 @@ Debian10 x64:
 pip3 install --upgrade pip
 ```
 
-& Debian11 x64：
+Debian11 x64：
 
 ```bash
 pip install --upgrade pip
@@ -48,7 +54,19 @@ pip install --upgrade pip
 
 3、安装 SDK
 
-CentOS7 x64 & Debian10 x64 & Debian11 x64：
+CentOS7 x64：
+
+```bash
+pip install -U cos-python-sdk-v5 --ignore-installed
+```
+
+Debian10 x64:
+
+```bash
+pip3 install -U cos-python-sdk-v5 --ignore-installed
+```
+
+Debian11 x64：
 
 ```bash
 pip install -U cos-python-sdk-v5 --ignore-installed
@@ -62,7 +80,14 @@ CentOS7 x64：
 yum install -y wget zip
 ```
 
-Debian10 x64 & Debian11 x64：
+Debian10 x64：
+
+```bash
+apt install -y wget zip
+```
+
+Debian11 x64：
+
 ```bash
 apt install -y wget zip
 ```
