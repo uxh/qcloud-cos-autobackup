@@ -2,7 +2,7 @@
 
 ## 注意
 
-本脚本仅在**CentOS7 x64**、**Debian10 x64**、**Debian11 x64**、**Ubuntu22.04 x64**上通过，其他系统暂未测试。
+本脚本仅在**CentOS7 x64**、**Debian10/11/12 x64**、**Ubuntu22.04 x64**上通过，其他系统暂未测试。
 
 ## 安装腾讯云官方 SDK（Python 版）
 
@@ -20,13 +20,7 @@ yum install -y python-pip
 yum install -y epel-release && yum install -y yum-utils && yum-config-manager --enable epel
 ```
 
-Debian10 x64:
-
-```bash
-apt install -y python3-pip
-```
-
-Debian11 x64、Ubuntu22.04 x64：
+Debian10/11/12 x64、Ubuntu22.04 x64：
 
 ```bash
 apt install -y python3-pip
@@ -52,6 +46,12 @@ Debian11 x64、Ubuntu22.04 x64：
 pip install --upgrade pip
 ```
 
+Debian12 x64：
+
+```bash
+pip install --upgrade pip --break-system-packages
+```
+
 3、安装 SDK
 
 CentOS7 x64：
@@ -72,6 +72,12 @@ Debian11 x64、Ubuntu22.04 x64：
 pip install -U cos-python-sdk-v5 --ignore-installed
 ```
 
+Debian12 x64：
+
+```bash
+pip install -U cos-python-sdk-v5 --ignore-installed --break-system-packages
+```
+
 4、安装其他依赖
 
 CentOS7 x64：
@@ -80,13 +86,7 @@ CentOS7 x64：
 yum install -y wget zip
 ```
 
-Debian10 x64：
-
-```bash
-apt install -y wget zip
-```
-
-Debian11 x64、Ubuntu22.04 x64：
+Debian10/11/12 x64、Ubuntu22.04 x64：
 
 ```bash
 apt install -y wget zip
